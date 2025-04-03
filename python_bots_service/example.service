@@ -1,0 +1,15 @@
+[Unit]
+Description=YOUR_DESC
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/путь к директории с ботами
+ExecStart=/путь к питону/bin/python3 /путь к скрипту/main.py
+RestartSec=10
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
